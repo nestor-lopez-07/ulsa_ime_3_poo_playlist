@@ -2,26 +2,33 @@
 
 Programación Orientada a Objetos · Ingeniería Mecatrónica · Tercer semestre
 
-Llena cada espacio conforme avances en las fases de [PRACTICA.md](PRACTICA.md).
 
 ## Fase 1. Entender el problema
 
 **1.1 El problema con mis propias palabras**
 
-[Inserta aquí tu respuesta]
+Es una aplicacion que acomoda en playlist canciones y podcast donde la playlist tiene un nombre trae las pistas de una biblioteca no las crea y tambien dice la duracion total de la suma de todas las pistas que tiene dentro las canciones denen tener un artista y genero y el podcast anfitrion y numero de episodio pero los dos deben tener duracion y nombre.
 
 **1.2 Sustantivos (posibles clases) y verbos (posibles métodos)**
 
-Sustantivos: _____
+Sustantivos:
+1. Canción
+2. Podcast
+3. Playlist
+4. Pista
+5. Duración
 
-Verbos: _____
+Verbos:
+1. Organizar
+2. Reunir
+3. Reportar
 
 **1.3 Relaciones** (completa con "es un", "tiene un" o "usa un")
 
-*   Una canción _____ pista.
-*   Un podcast _____ pista.
-*   Una pista _____ duración.
-*   Una playlist _____ canción.
+*   Una canción USA UNA  pista.
+*   Un podcast USA UNA pista.
+*   Una pista TIENE UNA  duración.
+*   Una playlist USA UNA canción.
 
 ## Fase 2. Diseñar la solución
 
