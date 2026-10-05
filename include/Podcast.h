@@ -27,3 +27,5 @@ public:
 };
 
 #endif
+// Pregunta: ¿qué código te ahorraste gracias a la herencia?
+//titulo y duracion
