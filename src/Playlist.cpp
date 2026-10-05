@@ -1,7 +1,6 @@
 // Implementación de la clase Playlist.
 
 #include "Playlist.h"
-
 #include <iostream>
 
 // TODO 4.1: implementa el constructor de Playlist.

@@ -1,7 +1,6 @@
 // Implementación de la clase Duracion.
 
 #include "Duracion.h"
-
 #include <iostream>
 #include <iomanip> // Para std::setw y std::setfill
 

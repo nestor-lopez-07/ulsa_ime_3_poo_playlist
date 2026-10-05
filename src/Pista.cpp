@@ -1,7 +1,6 @@
 // Implementación de la clase Pista.
 
 #include "Pista.h"
-
 #include <iostream>
 
 // La Duracion se construye en la lista de inicialización.
