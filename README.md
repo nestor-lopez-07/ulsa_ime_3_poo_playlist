@@ -40,11 +40,11 @@ Verbos:
 
 | Relación | Tipo | ¿Por qué? |
 | --- | --- | --- |
-| Cancion - Pista | _____ | _____ |
-| Podcast - Pista | _____ | _____ |
-| Pista - Duracion | _____ | _____ |
-| Playlist - Cancion | _____ | _____ |
-| Playlist - Podcast | _____ | _____ |
+| Cancion - Pista | Herencia | Una canción tiene una pista |
+| Podcast - Pista | Herencia | Un podcast tiene una pista |
+| Pista - Duracion | Composición | La pista tiene una duración |
+| Playlist - Cancion | Agregación | La playlist solo usa la canción existente |
+| Playlist - Podcast | Agregación | La playlist solo usa el podcast existente |
 
 ## Fase 3. Implementar
 
