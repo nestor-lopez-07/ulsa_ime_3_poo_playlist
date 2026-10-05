@@ -86,20 +86,20 @@ Experimento 3, un objeto en dos playlists: el cambio se refleja automáticamente
 | 1 | Ordenar la playlist por duración | Agregué el método `ordenarPorDuracion()` en `Playlist` | Para organizar mejor las pistas de la playlist según el tiempo |
 | 2 | Ver la pista más larga y la más corta | Agregué `mostrarPistaMasLarga()` y `mostrarPistaMasCorta()` | Para identificar rápidamente la pista con mayor y menor duración |
 
-Retos opcionales que intenté: Ordenar la playlist por duración; mostrar la pista más larga y la más corta.
+Retos opcionales que intenté: 2
 
 ## Fase 5. Publicar en GitHub
 
 **5.1 Enlace a mi fork**
 
-[Inserta aquí el enlace a tu fork]
+https://github.com/nestor-lopez-07/ulsa_ime_3_poo_playlist
 
 ## Cierre y reflexión
 
 **6.1 ¿Qué aprendiste en esta práctica?**
 
-[Inserta aquí tu respuesta]
+Aprendí a hacer un diagram de clases. También entendí cómo una playlist puede contener referencias a canciones y podcasts sin ser dueña de su memoria.
 
 **6.2 ¿Qué cambiarías de tu proceso la próxima vez?**
 
-[Inserta aquí tu respuesta]
+La próxima vez planearía mejor la estructura del proyecto, También me gustaría hacer pruebas más ordenadas desde el inicio y documentar cada duda para evitar errores.
