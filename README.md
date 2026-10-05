@@ -52,17 +52,17 @@ Verbos:
 
 | # | Duda | Cómo la resolví | Fuente |
 | --- | --- | --- | --- |
-| 1 | _____ | _____ | _____ |
-| 2 | _____ | _____ | _____ |
-| 3 | _____ | _____ | _____ |
+| 1 | Como mostrar bien los minutos  |use la libreria <iomanip> para darle formato|copilot|
+| 2 | Playlist no debe hacer delete de sus canciones en el destructor | Playlist solo guarda punteros y no es dueña de la memoria | copilot |
+| 3 | La Duracion se construye en la lista de inicialización | composición tiene que construir los objetos antes de ejecutar el constructor | copilot |
 
 **3.2 Experimentos guiados**
 
-Experimento 1, orden de construcción y destrucción: _____
+Experimento 1, orden de construcción y destrucción: primero se ejecuta el constructor de la clase base y luego el de la derivada. Al destruirse es inverso
 
-Experimento 2, ¿quién es dueño de quién?: _____
+Experimento 2, ¿quién es dueño de quién?: Pista es dueña de Duracion por composicion y Playlist Nno es dueña de las canciones ni de los podcasts, solo mantiene una relación de agregación
 
-Experimento 3, un objeto en dos playlists: _____
+Experimento 3, un objeto en dos playlists: el cambio se refleja automáticamente en todas las playlists que apunten a esa misma pista pueden guardar la dirección del mismo objeto sin duplicar memoria
 
 ## Fase 4. Probar y mejorar
 
@@ -70,23 +70,23 @@ Experimento 3, un objeto en dos playlists: _____
 
 | # | Caso | Resultado esperado | Resultado obtenido | ¿Pasa? |
 | --- | --- | --- | --- | --- |
-| 1 | Duración normal `Duracion(3, 45)` | 3:45 | _____ | _____ |
-| 2 | Segundos mayores a 59 `Duracion(0, 75)` | 1:15 | _____ | _____ |
-| 3 | Valores negativos `Duracion(-2, 10)` | 0:00 | _____ | _____ |
-| 4 | Título vacío | "Sin título" | _____ | _____ |
-| 5 | Playlist vacía | 0:00 y 0 pistas | _____ | _____ |
-| 6 | Canción duplicada | La segunda vez devuelve `false` | _____ | _____ |
-| 7 | Puntero nulo | Devuelve `false` | _____ | _____ |
-| 8 | Total con 2 canciones y 1 podcast | Suma correcta en m:ss | _____ | _____ |
+| 1 | Duración normal `Duracion(3, 45)` | 3:45 | 3:45 | si |
+| 2 | Segundos mayores a 59 `Duracion(0, 75)` | 1:15 | 1:15 | si |
+| 3 | Valores negativos `Duracion(-2, 10)` | 0:00 | 0:00 | si |
+| 4 | Título vacío | "Sin título" | "Sin título" | si |
+| 5 | Playlist vacía | 0:00 y 0 pistas | 0:00 y 0 pistas | si |
+| 6 | Canción duplicada | La segunda vez devuelve `false` | Devuelve false | si |
+| 7 | Puntero nulo | Devuelve `false` | Devuelve false | si |
+| 8 | Total con 2 canciones y 1 podcast | Suma correcta en m:ss | m:ss | si |
 
 **4.2 Bitácora de mejoras**
 
 | # | Falla o mejora detectada | Qué cambié | Por qué |
 | --- | --- | --- | --- |
-| 1 | _____ | _____ | _____ |
-| 2 | _____ | _____ | _____ |
+| 1 | Ordenar la playlist por duración | Agregué el método `ordenarPorDuracion()` en `Playlist` | Para organizar mejor las pistas de la playlist según el tiempo |
+| 2 | Ver la pista más larga y la más corta | Agregué `mostrarPistaMasLarga()` y `mostrarPistaMasCorta()` | Para identificar rápidamente la pista con mayor y menor duración |
 
-Retos opcionales que intenté: _____
+Retos opcionales que intenté: Ordenar la playlist por duración; mostrar la pista más larga y la más corta.
 
 ## Fase 5. Publicar en GitHub
 

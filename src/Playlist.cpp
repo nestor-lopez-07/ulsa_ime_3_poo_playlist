@@ -1,6 +1,7 @@
 // Implementación de la clase Playlist.
 
 #include "Playlist.h"
+#include <algorithm>
 #include <iostream>
 
 // TODO 4.1: implementa el constructor de Playlist.
@@ -92,4 +93,89 @@ void Playlist::mostrar() const {
     std::cout << "Duracion total: ";
     duracionTotal().imprimir();
     std::cout << std::endl;
+}
+
+void Playlist::ordenarPorDuracion() {
+    std::vector<const Pista*> pistas;
+
+    for (const auto* c : canciones) {
+        if (c != nullptr) {
+            pistas.push_back(c);
+        }
+    }
+
+    for (const auto* p : podcasts) {
+        if (p != nullptr) {
+            pistas.push_back(p);
+        }
+    }
+
+    std::sort(pistas.begin(), pistas.end(),
+              [](const Pista* a, const Pista* b) {
+                  return a->getDuracion().totalSegundos() < b->getDuracion().totalSegundos();
+              });
+
+    std::cout << "Playlist ordenada por duracion:" << std::endl;
+    for (const auto* pista : pistas) {
+        if (pista != nullptr) {
+            std::cout << "- " << pista->getTitulo() << " (";
+            pista->getDuracion().imprimir();
+            std::cout << ")" << std::endl;
+        }
+    }
+}
+
+void Playlist::mostrarPistaMasLarga() const {
+    const Pista* masLarga = nullptr;
+
+    for (const auto* c : canciones) {
+        if (c != nullptr && (masLarga == nullptr || c->getDuracion().totalSegundos() > masLarga->getDuracion().totalSegundos())) {
+            masLarga = c;
+        }
+    }
+
+    for (const auto* p : podcasts) {
+        if (p != nullptr && (masLarga == nullptr || p->getDuracion().totalSegundos() > masLarga->getDuracion().totalSegundos())) {
+            masLarga = p;
+        }
+    }
+
+    if (masLarga == nullptr) {
+        std::cout << "No hay pistas en la playlist." << std::endl;
+        return;
+    }
+
+    std::cout << "Pista mas larga: " << masLarga->getTitulo() << " (";
+    masLarga->getDuracion().imprimir();
+    std::cout << ")" << std::endl;
+}
+
+void Playlist::mostrarPistaMasCorta() const {
+    const Pista* masCorta = nullptr;
+
+    for (const auto* c : canciones) {
+        if (c != nullptr && (masCorta == nullptr || c->getDuracion().totalSegundos() < masCorta->getDuracion().totalSegundos())) {
+            masCorta = c;
+        }
+    }
+
+    for (const auto* p : podcasts) {
+        if (p != nullptr && (masCorta == nullptr || p->getDuracion().totalSegundos() < masCorta->getDuracion().totalSegundos())) {
+            masCorta = p;
+        }
+    }
+
+    if (masCorta == nullptr) {
+        std::cout << "No hay pistas en la playlist." << std::endl;
+        return;
+    }
+
+    std::cout << "Pista mas corta: " << masCorta->getTitulo() << " (";
+    masCorta->getDuracion().imprimir();
+    std::cout << ")" << std::endl;
+}
+
+void Playlist::mostrarMasLargaYMasCorta() const {
+    mostrarPistaMasLarga();
+    mostrarPistaMasCorta();
 }

@@ -36,6 +36,12 @@ public:
 
     // TODO 4.6: declara  void mostrar() const;
     void mostrar() const;
+
+    // Retos opcionales: ordenar y consultar pistas extremas.
+    void ordenarPorDuracion();
+    void mostrarPistaMasLarga() const;
+    void mostrarPistaMasCorta() const;
+    void mostrarMasLargaYMasCorta() const;
 };
 
 #endif
