@@ -6,7 +6,6 @@
 #define PISTA_H
 
 #include <string>
-
 #include "Duracion.h"
 
 class Pista {
@@ -21,8 +20,10 @@ public:
     Duracion getDuracion() const;
 
     // TODO 2.2: declara  void setTitulo(const std::string& nuevoTitulo);
+    void setTitulo(const std::string& nuevoTitulo);
 
     // TODO 2.3: declara  void mostrarInfo() const;
+    void mostrarInfo() const;
 };
 
 #endif
